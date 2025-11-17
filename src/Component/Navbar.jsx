@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoPawSharp } from "react-icons/io5";   // 👉 Paw icon added
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -24,12 +25,16 @@ const Navbar = () => {
           mt-3
         "
       >
-        {/* LOGO */}
+        {/* LOGO WITH PAW ICON */}
         <Link
           to="/"
-          className="text-3xl font-extrabold text-orange-700 drop-shadow-sm 
-                     hover:text-orange-800 transition"
+          className="
+            flex items-center gap-2
+            text-3xl font-extrabold text-orange-700 drop-shadow-sm 
+            hover:text-orange-800 transition
+          "
         >
+          <IoPawSharp className="text-orange-600 text-4xl" />
           PawFinder
         </Link>
 
@@ -38,29 +43,24 @@ const Navbar = () => {
           <Link className="text-orange-900 hover:text-orange-600 transition" to="/home">
             Home
           </Link>
-
           <Link className="text-orange-900 hover:text-orange-600 transition" to="/lost-pet">
             Lost Pets
           </Link>
-
           <Link className="text-orange-900 hover:text-orange-600 transition" to="/found-pet">
             Found Pets
           </Link>
-
           <Link className="text-orange-900 hover:text-orange-600 transition" to="/addpet">
             Add Pet
           </Link>
-
           <Link className="text-orange-900 hover:text-orange-600 transition" to="/about">
             About
           </Link>
-
           <Link className="text-orange-900 hover:text-orange-600 transition" to="/contact">
             Contact
           </Link>
         </nav>
 
-        {/* MOBILE MENU ICON */}
+        {/* MOBILE MENU BUTTON */}
         <button
           className="md:hidden text-orange-700 text-3xl"
           onClick={() => setOpen(!open)}
@@ -83,23 +83,18 @@ const Navbar = () => {
           <Link onClick={() => setOpen(false)} className="text-orange-900 text-lg" to="/home">
             Home
           </Link>
-
           <Link onClick={() => setOpen(false)} className="text-orange-900 text-lg" to="/lost-pet">
             Lost Pets
           </Link>
-
           <Link onClick={() => setOpen(false)} className="text-orange-900 text-lg" to="/found-pet">
             Found Pets
           </Link>
-
           <Link onClick={() => setOpen(false)} className="text-orange-900 text-lg" to="/addpet">
             Add Pet
           </Link>
-
           <Link onClick={() => setOpen(false)} className="text-orange-900 text-lg" to="/about">
             About
           </Link>
-
           <Link onClick={() => setOpen(false)} className="text-orange-900 text-lg" to="/contact">
             Contact
           </Link>
