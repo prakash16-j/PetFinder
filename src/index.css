@@ -1,0 +1,53 @@
+@import "tailwindcss";
+:root {
+  --brand: #FFA559;        /* Light Orange */
+  --brand-dark: #FF7F36;   /* Dark Orange */
+  --black-bg: #1A1A1A;     /* Page Background */
+  --black-card: #242424;   /* Card Background */
+  --border: #3A3A3A;       /* Border */
+  --muted: #B5B5B5;        /* Light Gray Text */
+  --text: #FFFFFF;         /* White Text */
+  --error: #FF4C4C;
+}
+
+/* Body background */
+body {
+  background: var(--black-bg);
+  color: var(--text);
+}
+
+/* Card container */
+.form-card {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+input, textarea, select {
+  background: #1F1F1F;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+input::placeholder, textarea::placeholder {
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--brand);
+  color: #000;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: var(--brand-dark);
+}
+.input-error {
+  border-color: var(--error) !important;
+}
+.text-error {
+  color: var(--error);
+}
+.helper {
+  color: var(--muted);
+}
